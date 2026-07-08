@@ -28,6 +28,7 @@ obj2.show_message()
 print("Are both objects same?", obj1 is obj2)
 
 """
+Output:
 Creating Singleton Object...
 Singleton Initialized
 Hello from Singleton!
