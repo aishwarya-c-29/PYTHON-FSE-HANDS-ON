@@ -1,0 +1,43 @@
+#match and group
+
+db.employee.aggregate([
+{
+    $match: { department: "IT" }
+},
+{
+    $group: {
+        _id: "$department",
+        totalSalary: { $sum: "$salary" }
+    }
+}
+]);
+
+Output:
+[
+  {
+    _id: "IT",
+    totalSalary: 110000
+  }
+]
+
+#group and sort
+
+db.employee.aggregate([
+{
+    $group: {
+        _id: "$department",
+        averageSalary: { $avg: "$salary" }
+    }
+},
+{
+    $sort: { averageSalary: -1 }
+}
+]);
+
+Output:
+[
+  { _id: "Finance", averageSalary: 70000 },
+  { _id: "IT", averageSalary: 55000 },
+  { _id: "HR", averageSalary: 50000 }
+]
+
