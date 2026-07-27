@@ -1,0 +1,29 @@
+body{
+    font-family:Arial;
+    text-align:center;
+}
+
+nav{
+    background:#1976d2;
+    padding:15px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-size:18px;
+}
+
+button{
+    padding:10px 20px;
+    background:#1976d2;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+
+input{
+    padding:8px;
+    width:200px;
+}
