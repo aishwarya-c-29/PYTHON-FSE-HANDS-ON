@@ -1,0 +1,19 @@
+<h2>Home Page</h2>
+
+<!-- Interpolation -->
+<h3>Welcome {{name}}</h3>
+
+<!-- Property Binding -->
+<img [src]="imageUrl" width="150">
+
+<br><br>
+
+<!-- Event Binding -->
+<button (click)="increase()">Click Me</button>
+
+<p>Count: {{count}}</p>
+
+<!-- Two-way Binding -->
+<input [(ngModel)]="name">
+
+<p>You typed: {{name}}</p>
